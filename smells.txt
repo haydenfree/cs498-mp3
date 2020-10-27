@@ -1,0 +1,4 @@
+1. This is a duplicated code snippet that could be fixed by turning the snippet into a method / function
+3. This is a feature envy code smell. We can resolve this by moving the code.
+4. We can resolve this duplicated code by implementing a while loop
+6. I removed some duplicate code that read in a file for settings. I did this by creating a new class that creates a public function to read in the file. The code was duplicated across two classes that now both use the method.

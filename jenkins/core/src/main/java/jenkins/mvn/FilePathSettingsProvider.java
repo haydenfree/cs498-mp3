@@ -13,6 +13,7 @@ import java.io.File;
 import org.apache.commons.lang.StringUtils;
 import org.kohsuke.stapler.DataBoundConstructor;
 
+
 /**
  * @author <a href="mailto:nicolas.deloof@gmail.com">Nicolas De Loof</a>
  * @author Dominik Bartholdi (imod)
@@ -45,16 +46,8 @@ public class FilePathSettingsProvider extends SettingsProvider {
             if (IOUtils.isAbsolute(targetPath)) {
                 return new FilePath(new File(targetPath));
             } else {
-                FilePath mrSettings = build.getModuleRoot().child(targetPath);
-                FilePath wsSettings = build.getWorkspace().child(targetPath);
-                try {
-                    if (!wsSettings.exists() && mrSettings.exists()) {
-                        wsSettings = mrSettings;
-                    }
-                } catch (Exception e) {
-                    throw new IllegalStateException("failed to find settings.xml at: " + wsSettings.getRemote());
-                }
-                return wsSettings;
+                filePathGetter fpg = new filePathGetter();
+                return fpg.getFilePath(build, targetPath);
             }
         } catch (Exception e) {
             throw new IllegalStateException("failed to prepare settings.xml");
