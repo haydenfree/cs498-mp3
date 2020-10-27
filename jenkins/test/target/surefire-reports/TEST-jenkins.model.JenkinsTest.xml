@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hudson.model.UpdateCenterTest" time="0.002" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="jenkins.model.JenkinsTest" time="50.087" tests="18" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
-    <property name="test" value="hudson.model.UpdateCenterTest"/>
+    <property name="test" value="jenkins.model.JenkinsTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/Users/hayden/Dropbox/School/Senior/CS498/mp3/jenkins"/>
     <property name="java.runtime.version" value="1.8.0_272-b10"/>
@@ -47,7 +47,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install -Dtest=hudson.model.UpdateCenterTest -DfailIfNoTests=false"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install -Dtest=jenkins.model.JenkinsTest -DfailIfNoTests=false"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -66,5 +66,22 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="data" classname="hudson.model.UpdateCenterTest" time="0.002"/>
+  <testcase name="testDoCheckDisplayNameSameAsDisplayName" classname="jenkins.model.JenkinsTest" time="14.55"/>
+  <testcase name="testIsNameUniqueSameAsCurrentJob" classname="jenkins.model.JenkinsTest" time="0.476"/>
+  <testcase name="testDoCheckDisplayNameSameAsJobName" classname="jenkins.model.JenkinsTest" time="0.416"/>
+  <testcase name="testIsDisplayNameUniqueSameAsCurrentJob" classname="jenkins.model.JenkinsTest" time="0.338"/>
+  <testcase name="testDoCheckViewName_GoodName" classname="jenkins.model.JenkinsTest" time="0.232"/>
+  <testcase name="testErrorPageShouldBeAnonymousAccessible" classname="jenkins.model.JenkinsTest" time="3.623"/>
+  <testcase name="testDoCheckViewName_NotGoodName" classname="jenkins.model.JenkinsTest" time="0.457"/>
+  <testcase name="testUnprotectedRootAction" classname="jenkins.model.JenkinsTest" time="1.444"/>
+  <testcase name="testItemFullNameExpansion" classname="jenkins.model.JenkinsTest" time="7.961"/>
+  <testcase name="testIsDisplayNameUniqueFalse" classname="jenkins.model.JenkinsTest" time="0.385"/>
+  <testcase name="testDoScript" classname="jenkins.model.JenkinsTest" time="10.556"/>
+  <testcase name="testDoEval" classname="jenkins.model.JenkinsTest" time="7.378"/>
+  <testcase name="testDoCheckDisplayNameUnique" classname="jenkins.model.JenkinsTest" time="0.304"/>
+  <testcase name="testIsDisplayNameUniqueTrue" classname="jenkins.model.JenkinsTest" time="0.299"/>
+  <testcase name="testIsNameUniqueFalse" classname="jenkins.model.JenkinsTest" time="0.362"/>
+  <testcase name="testIsNameUniqueTrue" classname="jenkins.model.JenkinsTest" time="0.459"/>
+  <testcase name="testComputerListenerNotifiedOnRestart" classname="jenkins.model.JenkinsTest" time="0.309"/>
+  <testcase name="runScriptOnOfflineComputer" classname="jenkins.model.JenkinsTest" time="0.538"/>
 </testsuite>

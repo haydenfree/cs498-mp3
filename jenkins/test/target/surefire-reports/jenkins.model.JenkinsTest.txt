@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: hudson.model.UpdateCenterTest
+Test set: jenkins.model.JenkinsTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec - in hudson.model.UpdateCenterTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 50.976 sec - in jenkins.model.JenkinsTest
